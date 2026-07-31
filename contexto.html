@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contexto general | Unidad IV</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="context-page">
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+  <div class="user-menu" id="userMenu">
+    <div class="user-menu-header">
+      <strong id="userNameLabel">Usuario</strong>
+      <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">✕</button>
+    </div>
+    <div class="menu-section">
+      <button id="themeToggle">🌙 Modo oscuro</button>
+      <button id="logoutBtn">🔒 Cerrar sesión</button>
+    </div>
+    <div class="menu-section">
+      <label for="nameInput">Nombre de usuario</label>
+      <input id="nameInput" type="text" value="Usuario" />
+      <button id="saveNameBtn">Guardar nombre</button>
+    </div>
+  </div>
+
+  <header class="hero-header">
+    <div class="header-content">
+      <p class="eyebrow">Contexto general</p>
+      <h1>Gestión de pruebas y despliegue de software en la nube</h1>
+      <p class="intro">
+        El desarrollo web moderno requiere calidad, seguridad, automatización y una buena estrategia de entrega para garantizar que las aplicaciones funcionen correctamente en producción. 
+        La liberación de software es el proceso mediante el cual una aplicación pasa de un entorno de desarrollo a uno de producción, asegurando su estabilidad y rendimiento.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="highlight">
+      <h2>¿Por qué es importante?</h2>
+      <p>
+        Una correcta liberación de software ayuda a reducir errores, asegurar la continuidad del servicio y mejorar la experiencia del usuario. 
+        En entornos empresariales, una liberación mal gestionada puede provocar fallos críticos, pérdida de datos o interrupciones del servicio.
+      </p>
+      <p>
+        Por ejemplo, plataformas como <strong>Netflix</strong> o <strong>Amazon Web Services (AWS)</strong> realizan cientos de despliegues diarios automatizados, 
+        garantizando que cada actualización llegue sin afectar a millones de usuarios.
+      </p>
+    </section>
+
+    <section class="process">
+      <h2>Infraestructura esencial para una aplicación web</h2>
+      <p>
+        Una arquitectura bien diseñada permite que la aplicación sea estable, segura y escalable. 
+        La infraestructura moderna se apoya en contenedores, servicios en la nube y herramientas de automatización.
+      </p>
+
+      <div class="card-grid">
+        <div class="card">
+          <img src="images/docker.svg" alt="Servidor de aplicaciones">
+          <h3>Servidor de aplicaciones</h3>
+          <p>
+            Ejecuta la lógica del sistema, procesa solicitudes del usuario y conecta con otros servicios. 
+            Ejemplo: <strong>Node.js</strong> o <strong>Apache Tomcat</strong> para manejar peticiones web.
+          </p>
+        </div>
+        <div class="card">
+          <img src="images/docker.svg" alt="Servidor de base de datos">
+          <h3>Servidor de base de datos</h3>
+          <p>
+            Almacena y administra la información de forma segura, permitiendo consultas rápidas y consistentes. 
+            Ejemplo: <strong>MySQL</strong>, <strong>PostgreSQL</strong> o <strong>MongoDB</strong>.
+          </p>
+        </div>
+        <div class="card">
+          <img src="images/docker.svg" alt="Balanceo de cargas">
+          <h3>Balanceo de cargas</h3>
+          <p>
+            Distribuye el tráfico entre varios servidores para mejorar rendimiento y evitar caídas. 
+            Ejemplo: <strong>Nginx</strong> o <strong>HAProxy</strong> como balanceadores de carga.
+          </p>
+        </div>
+        <div class="card">
+          <img src="images/docker.svg" alt="Configuración de dominio">
+          <h3>Configuración de dominio</h3>
+          <p>
+            Asocia el nombre del sitio con la infraestructura, facilitando el acceso desde internet. 
+            Ejemplo: configuración de DNS en <strong>Cloudflare</strong> o <strong>Google Domains</strong>.
+          </p>
+        </div>
+        <div class="card">
+          <img src="images/docker.svg" alt="Certificados de seguridad">
+          <h3>Certificados de seguridad</h3>
+          <p>
+            Protegen la comunicación mediante HTTPS y generan confianza para los usuarios. 
+            Ejemplo: certificados gratuitos de <strong>Let's Encrypt</strong> o integraciones SSL en <strong>AWS</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation">
+      <h2>Herramientas de gestión de contenedores</h2>
+      <p>
+        Los contenedores se gestionan con herramientas que facilitan su creación, despliegue y control. Entre las más utilizadas están <strong>Docker</strong>, <strong>AWS</strong>, <strong>Azure</strong> y <strong>Google Cloud</strong>.
+      </p>
+      <div class="card-grid">
+        <div class="card">
+          <img src="images/docker.svg" alt="Docker">
+          <h3>Docker</h3>
+          <p>Permite crear imágenes y ejecutar aplicaciones en contenedores de forma rápida y reproducible.</p>
+        </div>
+        <div class="card">
+          <img src="images/docker.svg" alt="AWS">
+          <h3>AWS</h3>
+          <p>Ofrece servicios en la nube para computación, almacenamiento y despliegue de aplicaciones.</p>
+        </div>
+        <div class="card">
+          <img src="images/docker.svg" alt="Azure">
+          <h3>Azure</h3>
+          <p>Proporciona soluciones de infraestructura, seguridad y administración para entornos empresariales.</p>
+        </div>
+        <div class="card">
+          <img src="images/docker.svg" alt="Google Cloud">
+          <h3>Google Cloud</h3>
+          <p>Integra servicios de computación, bases de datos y contenedores para aplicaciones modernas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation">
+      <h2>Automatización y control de versiones</h2>
+      <p>
+        La automatización permite realizar pruebas y despliegues sin intervención manual, reduciendo errores humanos. 
+        Herramientas como <strong>Jenkins</strong>, <strong>GitHub Actions</strong> o <strong>GitLab CI/CD</strong> ejecutan pipelines que compilan, prueban y publican el software automáticamente.
+      </p>
+      <p>
+        El control de versiones, mediante sistemas como <strong>Git</strong>, garantiza que cada cambio esté documentado y pueda revertirse si ocurre un fallo.
+      </p>
+      <div class="example-box">
+        <h3>Ejemplo de flujo CI/CD</h3>
+        <ol>
+          <li>El desarrollador sube código a GitHub.</li>
+          <li>GitHub Actions ejecuta pruebas unitarias y de integración.</li>
+          <li>Si todo pasa correctamente, el sistema despliega la nueva versión en producción.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <h2>Beneficios principales</h2>
+      <ul>
+        <li>Menos errores en producción y mayor estabilidad.</li>
+        <li>Mayor seguridad y confiabilidad en los servicios.</li>
+        <li>Mejor documentación para usuarios y equipos técnicos.</li>
+        <li>Implementaciones más rápidas y ordenadas gracias a la automatización.</li>
+        <li>Escalabilidad y flexibilidad para adaptarse a nuevas demandas.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Héctor Javier Luna Herrerías. Proyecto académico - Unidad IV.</p>
+    <a href="index.html" class="back-link">Volver a la página principal</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
