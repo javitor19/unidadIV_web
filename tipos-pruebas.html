@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de pruebas de software</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login-overlay" id="loginOverlay">
+      <div class="login-card">
+        <div class="login-icon">🔐</div>
+        <h2>Acceso al contenido</h2>
+        <p>Ingresa tus credenciales para continuar.</p>
+        <form id="loginForm">
+          <label for="usuario">Correo</label>
+          <input id="usuario" type="email" placeholder="admin@correo.com" required />
+
+          <label for="clave">Contraseña</label>
+          <input id="clave" type="password" placeholder="1234" required />
+
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+    <div class="user-menu" id="userMenu">
+      <div class="user-menu-header">
+        <strong id="userNameLabel">Usuario</strong>
+        <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">✕</button>
+      </div>
+      <div class="menu-section">
+        <button id="themeToggle">🌙 Modo oscuro</button>
+        <button id="logoutBtn">🔒 Cerrar sesión</button>
+      </div>
+      <div class="menu-section">
+        <label for="nameInput">Nombre de usuario</label>
+        <input id="nameInput" type="text" value="Usuario" />
+        <button id="saveNameBtn">Guardar nombre</button>
+      </div>
+    </div>
+
+    <header class="hero-header">
+      <div class="header-content">
+        <p class="eyebrow">Unidad IV · Calidad de software</p>
+        <h1>Tipos de pruebas de software</h1>
+        <p class="intro">
+          Cada tipo de prueba cumple una función específica para validar el comportamiento, la estabilidad y la experiencia del sistema.
+        </p>
+        <nav class="top-nav">
+          <a href="index.html">Inicio</a>
+          <a href="contexto.html">Contexto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <div class="session-status" id="sessionStatus">Sesión iniciada correctamente</div>
+
+      <section class="hero-panel">
+        <div>
+          <h2>Cómo se aplican las pruebas</h2>
+          <p>
+            Las pruebas de software no solo cumplen la función de detectar fallos o errores en el sistema, sino que también constituyen un mecanismo esencial para garantizar que la plataforma sea confiable, segura y fácil de usar en distintos escenarios. Cada técnica de prueba aporta una perspectiva única sobre el producto, permitiendo evaluar aspectos como la estabilidad, la eficiencia, la usabilidad y la resistencia frente a condiciones adversas.
+            Al aplicar metodologías diversas —como pruebas funcionales, de rendimiento, de seguridad o de experiencia de usuario— se obtiene una visión integral del sistema, lo que facilita identificar áreas de mejora y asegurar que los requisitos definidos se cumplan de manera consistente. Este enfoque multidimensional no solo fortalece la calidad técnica del software, sino que también incrementa la confianza de los usuarios y administradores al interactuar con la aplicación.
+          </p>
+        </div>
+        <div class="hero-badge">🧪 Validación continua</div>
+      </section>
+
+      <section class="tema info-panel">
+        <h2>Resumen general</h2>
+        <p>
+          Desde verificar funciones aisladas hasta evaluar rendimiento y usabilidad, las pruebas permiten mejorar la calidad del software antes de la liberación.
+        </p>
+      </section>
+
+      <section class="test-grid">
+        <article class="test-card">
+          <img src="images/caja-blanca.svg" alt="Ilustración de pruebas de caja blanca" />
+          <h3>Caja blanca</h3>
+          <p>Se revisa la lógica interna del programa. Es útil para validar condiciones, decisiones y rutas de ejecución del código.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/caja-negra.svg" alt="Ilustración de pruebas de caja negra" />
+          <h3>Caja negra</h3>
+          <p>Se evalúa el sistema desde la perspectiva del usuario, sin mirar la estructura interna. Se comprueba si la salida es correcta.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/unitarias.svg" alt="Ilustración de pruebas unitarias" />
+          <h3>Unitarias</h3>
+          <p>Prueban funciones o módulos pequeños de forma aislada para verificar que cada parte del sistema funcione correctamente.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/integracion.svg" alt="Ilustración de pruebas de integración" />
+          <h3>Integración</h3>
+          <p>Validan que distintos módulos trabajen juntos de manera correcta cuando se unen en un flujo completo.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/regresion.svg" alt="Ilustración de pruebas de regresión" />
+          <h3>Regresión</h3>
+          <p>Se utilizan para confirmar que cambios recientes no han reintroducido errores en funcionalidades que ya funcionaban.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/rendimiento.svg" alt="Ilustración de pruebas de rendimiento" />
+          <h3>Rendimiento</h3>
+          <p>Miden tiempos de respuesta, consumo de memoria y capacidad del sistema bajo carga para asegurar estabilidad.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/esfuerzo.svg" alt="Ilustración de pruebas de esfuerzo" />
+          <h3>Esfuerzo</h3>
+          <p>Evalúan el comportamiento del sistema cuando se somete a niveles altos de trabajo o tráfico.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/usabilidad.svg" alt="Ilustración de pruebas de usabilidad" />
+          <h3>Usabilidad</h3>
+          <p>Analizan si el sistema es claro, cómodo y sencillo de usar para las personas que interactúan con él.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Unidad IV · Pruebas y liberación de software</p>
+      <p><a class="back-link" href="index.html">Volver al inicio</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
