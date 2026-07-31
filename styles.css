@@ -542,6 +542,12 @@ main {
   font-weight: 600;
 }
 
+body.dark-mode .tag {
+  background: rgba(56, 189, 248, 0.16);
+  color: #7dd3fc;
+  border: 1px solid rgba(125, 211, 252, 0.25);
+}
+
 .accordion-content {
   display: none;
   padding: 0 24px 24px;
@@ -576,6 +582,13 @@ main {
   background: #f8fafc;
   border: 1px solid var(--border);
   font-size: 0.95rem;
+  color: var(--text);
+}
+
+body.dark-mode .pill-list span {
+  background: rgba(15, 23, 42, 0.95);
+  color: #f8fafc;
+  border-color: rgba(148, 163, 184, 0.35);
 }
 
 .tema ul {
