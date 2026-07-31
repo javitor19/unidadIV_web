@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acerca de mi proyecto | Unidad IV</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="context-page about-page">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+    <div class="user-menu" id="userMenu">
+      <div class="user-menu-header">
+        <strong id="userNameLabel">Usuario</strong>
+        <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">✕</button>
+      </div>
+      <div class="menu-section">
+        <button id="themeToggle">🌙 Modo oscuro</button>
+        <button id="logoutBtn">🔒 Cerrar sesión</button>
+      </div>
+      <div class="menu-section">
+        <label for="nameInput">Nombre de usuario</label>
+        <input id="nameInput" type="text" value="Usuario" />
+        <button id="saveNameBtn">Guardar nombre</button>
+      </div>
+    </div>
+
+    <header class="hero-header">
+      <div class="header-content">
+        <p class="eyebrow">Acerca de mi proyecto</p>
+        <h1>Herramientas, pruebas y gestión para un proyecto seguro</h1>
+        <p class="intro">
+          Este proyecto se desarrolló para explicar de forma clara cómo se organizan las pruebas, la liberación del software, los contenedores y la documentación en un entorno web moderno.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="highlight">
+        <h2>¿Qué se utilizó para hacerlo?</h2>
+        <p>
+          Para construir este sitio se emplearon herramientas básicas y accesibles que permiten presentar información de manera ordenada, visual y funcional. La idea fue combinar estructura, diseño y comportamiento para que la página sea fácil de comprender y mantener.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <img src="images/docker.svg" alt="HTML5" />
+            <h3>HTML5</h3>
+            <p>Se usó para organizar el contenido en secciones claras, títulos, listas y enlaces de navegación.</p>
+          </div>
+          <div class="card">
+            <img src="images/docker.svg" alt="CSS3" />
+            <h3>CSS3</h3>
+            <p>Se aplicó para dar estilo, colores, espaciados, tarjetas y una experiencia visual más profesional.</p>
+          </div>
+          <div class="card">
+            <img src="images/docker.svg" alt="JavaScript" />
+            <h3>JavaScript</h3>
+            <p>Permite agregar interactividad como el menú, el modo oscuro, el inicio de sesión y los acordeones.</p>
+          </div>
+          <div class="card">
+            <img src="images/docker.svg" alt="Docker" />
+            <h3>Docker</h3>
+            <p>Se incluyó como parte del enfoque de contenedores para mostrar cómo un proyecto puede ejecutarse de forma consistente.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="process">
+        <h2>Pruebas que podrían hacerse para que no se filtren datos</h2>
+        <p>
+          Para que el proyecto sea más confiable, conviene realizar pruebas que verifiquen que la información sensible no se exponga ni se manipule de forma incorrecta. Estas pruebas ayudan a proteger la privacidad y mejorar la seguridad del sitio.
+        </p>
+        <div class="example-box">
+          <h3>Pruebas recomendadas</h3>
+          <ol>
+            <li>Validar formularios para evitar entradas vacías, incorrectas o maliciosas.</li>
+            <li>Probar el inicio de sesión con usuarios correctos e incorrectos para confirmar que no se revela información privada.</li>
+            <li>Comprobar que los datos guardados en el navegador, como nombres o preferencias, se almacenen de forma segura y con control.</li>
+            <li>Verificar que los mensajes de error no filtren información interna del sistema.</li>
+            <li>Evaluar el comportamiento del sitio con diferentes navegadores y dispositivos para detectar fallos que puedan comprometer la experiencia.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="automation">
+        <h2>Buena gestión de la página</h2>
+        <p>
+          Una página bien gestionada debe ser clara, organizada y fácil de mantener. Esto incluye separar el contenido en secciones, usar enlaces consistentes y cuidar la estructura de los elementos visuales.
+        </p>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Uso de contenedores</h3>
+            <p>Los contenedores permiten agrupar el proyecto y sus dependencias para que funcione igual en distintos entornos.</p>
+          </div>
+          <div class="card">
+            <h3>Documentación</h3>
+            <p>Una buena documentación ayuda a entender el propósito del proyecto, cómo usarlo y cómo mantenerlo.</p>
+          </div>
+          <div class="card">
+            <h3>Organización del contenido</h3>
+            <p>Separar información en bloques y páginas facilita la navegación y mejora la comprensión del usuario.</p>
+          </div>
+          <div class="card">
+            <h3>Control de cambios</h3>
+            <p>El uso de Git y versiones permite revisar mejoras, corregir errores y mantener el proyecto ordenado.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits">
+        <h2>Contenedores y Docker en este proyecto</h2>
+        <ul>
+          <li>Permiten ejecutar la aplicación de forma consistente en desarrollo y producción.</li>
+          <li>Ayudan a evitar problemas de compatibilidad entre sistemas.</li>
+          <li>Facilitan la distribución del proyecto y su mantenimiento a largo plazo.</li>
+          <li>Mejoran la organización al separar dependencias y servicios en unidades manejables.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Héctor Javier. Proyecto académico - Unidad IV.</p>
+      <a href="index.html" class="back-link">Volver a la página principal</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
