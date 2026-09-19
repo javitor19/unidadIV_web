@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipos de requerimientos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login-overlay" id="loginOverlay">
+      <div class="login-shell">
+        <div class="login-visual">
+          <span class="login-badge">Unidad IV</span>
+          <h2>Gestión de requisitos y calidad</h2>
+          <p>
+            Accede a la información clave sobre análisis, documentación y validación de requisitos del sistema.
+          </p>
+          <ul>
+            <li>Definición correcta</li>
+            <li>Priorización eficiente</li>
+            <li>Control de cambios</li>
+          </ul>
+        </div>
+
+        <div class="login-card">
+          <div class="login-icon">🔐</div>
+          <h2>Acceso al contenido</h2>
+          <p>Ingresa tus credenciales para continuar.</p>
+          <form id="loginForm">
+            <label for="usuario">Correo</label>
+            <input id="usuario" type="email" placeholder="admin@correo.com" required />
+
+            <label for="clave">Contraseña</label>
+            <input id="clave" type="password" placeholder="1234" required />
+
+            <button type="submit">Entrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+    <div class="user-menu" id="userMenu">
+      <div class="user-menu-header">
+        <strong id="userNameLabel">Usuario</strong>
+        <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">✕</button>
+      </div>
+      <div class="menu-section">
+        <button id="themeToggle">🌙 Modo oscuro</button>
+        <button id="logoutBtn">🔒 Cerrar sesión</button>
+      </div>
+      <div class="menu-section">
+        <label for="nameInput">Nombre de usuario</label>
+        <input id="nameInput" type="text" value="Usuario" />
+        <button id="saveNameBtn">Guardar nombre</button>
+      </div>
+    </div>
+
+    <header class="hero-header">
+      <div class="header-content">
+        <p class="eyebrow">Unidad IV · Requisitos del sistema</p>
+        <h1>Tipos de requerimientos</h1>
+        <p class="intro">
+          Los requerimientos describen lo que debe hacer un sistema y cómo debe responder ante las necesidades del negocio, del usuario y de la operación.
+        </p>
+        <nav class="top-nav">
+          <a href="index.html">Inicio</a>
+          <a href="tipos-pruebas.html">Tipos de pruebas</a>
+          <a href="gestion-pruebas.html">Gestión de pruebas</a>
+          <a href="acerca-mi-proyecto.html">Acerca de mi proyecto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <div class="session-status" id="sessionStatus">Sesión iniciada correctamente</div>
+
+      <section class="hero-panel">
+        <div>
+          <h2>¿Qué son los requerimientos?</h2>
+          <p>
+            Los requisitos representan condiciones, capacidades o funciones que un sistema debe satisfacer para resolver un problema o alcanzar un objetivo. Su correcta definición permite planificar, desarrollar y validar software con mayor precisión, evitando cambios costosos durante la etapa de implementación.
+          </p>
+        </div>
+        <div class="hero-badge">📋 Relevancia técnica</div>
+      </section>
+
+      <section class="tema info-panel">
+        <h2>Resumen del tema</h2>
+        <p>
+          Un buen análisis de requisitos alinea las necesidades del cliente con la solución tecnológica, reduciendo riesgos, mejorando la calidad y facilitando la entrega del producto.
+        </p>
+      </section>
+
+      <section class="requirement-dashboard" id="themeDashboard">
+        <div class="theme-selector" aria-label="Selector de temas">
+          <button type="button" class="active" data-theme="funcionales" aria-pressed="true">Funcionales</button>
+          <button type="button" data-theme="noFuncionales" aria-pressed="false">No funcionales</button>
+          <button type="button" data-theme="negocio" aria-pressed="false">De negocio</button>
+          <button type="button" data-theme="interfaz" aria-pressed="false">De interfaz</button>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <span>Cumplimiento</span>
+            <strong id="statCumplimiento">88%</strong>
+          </div>
+          <div class="stat-box">
+            <span>Prioridad</span>
+            <strong id="statPrioridad">92%</strong>
+          </div>
+          <div class="stat-box">
+            <span>Riesgo</span>
+            <strong id="statRiesgo">18%</strong>
+          </div>
+          <div class="stat-box">
+            <span>Esfuerzo</span>
+            <strong id="statEsfuerzo">74%</strong>
+          </div>
+        </div>
+
+        <div class="charts-grid">
+          <article class="chart-card">
+            <h3 id="requirementTitle">Requisitos funcionales</h3>
+            <p id="requirementDescription">Se enfocan en las acciones y resultados esperados del sistema.</p>
+            <canvas id="pieChart" width="320" height="260" aria-label="Gráfica de pastel"></canvas>
+            <div class="legend" id="chartLegend"></div>
+          </article>
+
+          <article class="chart-card">
+            <h3>Estadísticas del tema</h3>
+            <canvas id="barChart" width="420" height="260" aria-label="Gráfica de barras"></canvas>
+          </article>
+        </div>
+      </section>
+
+      <section class="tema requirement-summary">
+        <h2>Aspectos clave a atender</h2>
+        <ul id="requirementDetails">
+          <li>Validación de formularios y flujos principales.</li>
+          <li>Autenticación segura para usuarios y administradores.</li>
+          <li>Generación de reportes con filtros y exportación.</li>
+          <li>Integración con servicios internos y APIs externas.</li>
+        </ul>
+      </section>
+
+      <section class="test-grid">
+        <article class="test-card">
+          <h3>Requisitos funcionales</h3>
+          <p>Definen lo que el sistema debe hacer: iniciar sesión, registrar usuarios, calcular datos, generar reportes y ejecutar procesos específicos.</p>
+        </article>
+
+        <article class="test-card">
+          <h3>Requisitos no funcionales</h3>
+          <p>Se relacionan con rendimiento, seguridad, escalabilidad, disponibilidad, mantenibilidad y compatibilidad del sistema.</p>
+        </article>
+
+        <article class="test-card">
+          <h3>Requisitos de negocio</h3>
+          <p>Expresan los objetivos organizacionales, las metas del proyecto y el valor que debe aportar la solución al cliente.</p>
+        </article>
+
+        <article class="test-card">
+          <h3>Requisitos de interfaz</h3>
+          <p>Establecen cómo debe verse y operar la experiencia del usuario, considerando navegación, diseño y accesibilidad.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>Unidad IV · Pruebas y liberación de software</p>
+      <p><a class="back-link" href="index.html">Volver al inicio</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

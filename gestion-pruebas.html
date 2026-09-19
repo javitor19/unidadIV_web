@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de pruebas de software</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="context-page">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+
+    <div class="user-menu" id="userMenu">
+      <div class="user-menu-header">
+        <strong id="userNameLabel">Usuario</strong>
+        <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">✕</button>
+      </div>
+      <div class="menu-section">
+        <button id="themeToggle">🌙 Modo oscuro</button>
+        <button id="logoutBtn">🔒 Cerrar sesión</button>
+      </div>
+      <div class="menu-section">
+        <label for="nameInput">Nombre de usuario</label>
+        <input id="nameInput" type="text" value="Usuario" />
+        <button id="saveNameBtn">Guardar nombre</button>
+      </div>
+    </div>
+
+    <header class="hero-header">
+      <div class="header-content">
+        <p class="eyebrow">Gestión de pruebas</p>
+        <h1>Pruebas de software y su significado</h1>
+        <p class="intro">
+          La gestión de pruebas es el conjunto de actividades para planear, diseñar, ejecutar,
+          supervisar y reportar la validación del software para asegurar calidad, seguridad y continuidad.
+        </p>
+        <nav class="top-nav">
+          <a href="index.html">Inicio</a>
+          <a href="tipos-pruebas.html">Tipos de pruebas</a>
+          <a href="contexto.html">Contexto</a>
+          <a href="acerca-mi-proyecto.html">Acerca del proyecto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="landing-summary">
+        <div class="landing-copy">
+          <p class="eyebrow eyebrow-light">Pantalla de inicio</p>
+          <h2>Gestión de pruebas para entregar software con calidad</h2>
+          <p>
+            En esta pantalla se visualiza la importancia de controlar cada etapa de validación:
+            identificar riesgos, diseñar pruebas, ejecutar verificaciones y confirmar que el producto
+            está listo para liberarse con seguridad.
+          </p>
+        </div>
+        <div class="landing-stats">
+          <div>
+            <strong>01</strong>
+            <span>Planificación</span>
+          </div>
+          <div>
+            <strong>02</strong>
+            <span>Ejecución</span>
+          </div>
+          <div>
+            <strong>03</strong>
+            <span>Validación</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-panel">
+        <h2>¿Qué significa?</h2>
+        <p>
+          Significa organizar de forma estructurada cada prueba que valida si el software cumple con los requisitos,
+          funciona correctamente y puede entregarse con confianza. Esto incluye revisar riesgos, priorizar casos,
+          ejecutar pruebas y analizar resultados antes de la liberación.
+        </p>
+      </section>
+
+      <section class="test-grid">
+        <article class="test-card">
+          <img src="images/unitarias.svg" alt="Pruebas unitarias" />
+          <h3>Pruebas unitarias</h3>
+          <p><strong>Significado:</strong> Validan funciones o módulos pequeños para comprobar que cada parte del sistema funciona de forma aislada y correcta.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/integracion.svg" alt="Pruebas de integración" />
+          <h3>Integración</h3>
+          <p><strong>Significado:</strong> Comprueba que varios módulos o servicios interactúan correctamente cuando se conectan entre sí.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/regresion.svg" alt="Pruebas de regresión" />
+          <h3>Regresión</h3>
+          <p><strong>Significado:</strong> Asegura que cambios recientes no hayan roto funcionalidades que ya estaban funcionando antes.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/rendimiento.svg" alt="Pruebas de rendimiento" />
+          <h3>Rendimiento</h3>
+          <p><strong>Significado:</strong> Evalúa la velocidad, estabilidad y capacidad del sistema bajo carga para detectar cuellos de botella.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/esfuerzo.svg" alt="Pruebas de esfuerzo" />
+          <h3>Esfuerzo</h3>
+          <p><strong>Significado:</strong> Determina cómo responde el sistema cuando se somete a niveles altos de tráfico o uso simultáneo.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/usabilidad.svg" alt="Pruebas de usabilidad" />
+          <h3>Usabilidad</h3>
+          <p><strong>Significado:</strong> Mide si la aplicación es clara, cómoda y fácil de usar para las personas que la utilizan.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/caja-blanca.svg" alt="Pruebas de caja blanca" />
+          <h3>Caja blanca</h3>
+          <p><strong>Significado:</strong> Revisa la lógica interna del software para analizar decisiones, rutas y condiciones del código.</p>
+        </article>
+
+        <article class="test-card">
+          <img src="images/caja-negra.svg" alt="Pruebas de caja negra" />
+          <h3>Caja negra</h3>
+          <p><strong>Significado:</strong> Evalúa la funcionalidad del sistema desde la perspectiva del usuario, sin ver su estructura interna.</p>
+        </article>
+      </section>
+
+      <section class="highlight">
+        <h2>Importancia de la gestión de pruebas</h2>
+        <p>
+          Una buena gestión de pruebas ayuda a detectar errores a tiempo, reducir riesgos, optimizar tiempos de entrega
+          y garantizar que la aplicación llegue al usuario con mayor calidad y confianza.
+        </p>
+        <div class="pill-list">
+          <span>Planificación</span>
+          <span>Diseño</span>
+          <span>Ejecución</span>
+          <span>Validación</span>
+          <span>Reporte</span>
+          <span>Mejora continua</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Unidad IV · Gestión de pruebas de software</p>
+      <p><a class="back-link" href="index.html">Volver al inicio</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
