@@ -3,39 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestión de pruebas de software</title>
+    <meta name="description" content="Gestión, tipos e importancia de las pruebas de software para el aseguramiento de calidad técnica y funcional." />
+    <title>Gestión de pruebas de software · Unidad IV</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="context-page">
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <!-- Panel de control lateral accesible -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="userMenu">☰</button>
 
-    <div class="user-menu" id="userMenu">
+    <aside class="user-menu" id="userMenu" aria-label="Menú de usuario" aria-hidden="true">
       <div class="user-menu-header">
         <strong id="userNameLabel">Usuario</strong>
         <button class="close-menu" id="closeMenu" aria-label="Cerrar menú">✕</button>
       </div>
       <div class="menu-section">
-        <button id="themeToggle">🌙 Modo oscuro</button>
-        <button id="logoutBtn">🔒 Cerrar sesión</button>
+        <button id="themeToggle" type="button">🌙 Modo oscuro</button>
+        <button id="logoutBtn" type="button">🔒 Cerrar sesión</button>
       </div>
       <div class="menu-section">
         <label for="nameInput">Nombre de usuario</label>
-        <input id="nameInput" type="text" value="Usuario" />
-        <button id="saveNameBtn">Guardar nombre</button>
+        <input id="nameInput" type="text" value="Usuario" autocomplete="username" />
+        <button id="saveNameBtn" type="button">Guardar nombre</button>
       </div>
-    </div>
+    </aside>
 
+    <!-- Encabezado principal con indicador de página activa destacado -->
     <header class="hero-header">
       <div class="header-content">
-        <p class="eyebrow">Gestión de pruebas</p>
+        <p class="eyebrow" style="letter-spacing: 0.15em; font-weight: 700;">GESTIÓN DE CALIDAD DE SOFTWARE</p>
         <h1>Pruebas de software y su significado</h1>
         <p class="intro">
-          La gestión de pruebas es el conjunto de actividades para planear, diseñar, ejecutar,
-          supervisar y reportar la validación del software para asegurar calidad, seguridad y continuidad.
+          La gestión de pruebas es el conjunto coordinado de actividades orientadas a planear, diseñar,
+          ejecutar, supervisar y reportar la validación técnica del sistema para asegurar calidad, seguridad y continuidad.
         </p>
-        <nav class="top-nav">
+
+        <!-- CAMBIO VISUAL: Navegación completa con pestaña activa resaltada a la vista -->
+        <nav class="top-nav" aria-label="Navegación principal">
           <a href="index.html">Inicio</a>
+          <a href="gestion-pruebas.html" aria-current="page" style="background: rgba(255, 255, 255, 0.25); border-radius: 6px; padding: 6px 12px; font-weight: bold; text-decoration: underline;">Gestión de pruebas ✓</a>
           <a href="tipos-pruebas.html">Tipos de pruebas</a>
+          <a href="tipos-requerimientos.html">Requerimientos</a>
           <a href="contexto.html">Contexto</a>
           <a href="acerca-mi-proyecto.html">Acerca del proyecto</a>
         </nav>
@@ -43,111 +50,142 @@
     </header>
 
     <main>
-      <section class="landing-summary">
+      <!-- CAMBIO VISUAL: Aviso destacado de revisión para el equipo -->
+      <div style="max-width: 1000px; margin: 1.5rem auto -0.5rem auto; padding: 0.85rem 1.25rem; background: #eef2ff; border-left: 5px solid #4f46e5; border-radius: 6px; color: #1e1b4b; font-size: 0.95rem; display: flex; align-items: center; justify-content: space-between;">
+        <span>📌 <strong>Módulo actualizado:</strong> Catálogo técnico de pruebas y ciclo operativo revisado.</span>
+        <span style="font-size: 0.8rem; background: #4f46e5; color: #fff; padding: 3px 8px; border-radius: 12px; font-weight: 600;">Versión Colaborativa</span>
+      </div>
+
+      <section class="landing-summary" aria-labelledby="seccion-inicio">
         <div class="landing-copy">
           <p class="eyebrow eyebrow-light">Pantalla de inicio</p>
-          <h2>Gestión de pruebas para entregar software con calidad</h2>
+          <h2 id="seccion-inicio">Gestión de pruebas para entregar software con calidad</h2>
           <p>
             En esta pantalla se visualiza la importancia de controlar cada etapa de validación:
             identificar riesgos, diseñar pruebas, ejecutar verificaciones y confirmar que el producto
-            está listo para liberarse con seguridad.
+            está listo para liberarse con seguridad y estabilidad técnica.
           </p>
         </div>
-        <div class="landing-stats">
-          <div>
+        <div class="landing-stats" role="list" aria-label="Fases de control">
+          <div role="listitem" style="border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 10px;">
             <strong>01</strong>
             <span>Planificación</span>
           </div>
-          <div>
+          <div role="listitem" style="border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 10px;">
             <strong>02</strong>
             <span>Ejecución</span>
           </div>
-          <div>
+          <div role="listitem" style="border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 10px;">
             <strong>03</strong>
             <span>Validación</span>
           </div>
         </div>
       </section>
 
-      <section class="info-panel">
-        <h2>¿Qué significa?</h2>
-        <p>
-          Significa organizar de forma estructurada cada prueba que valida si el software cumple con los requisitos,
-          funciona correctamente y puede entregarse con confianza. Esto incluye revisar riesgos, priorizar casos,
-          ejecutar pruebas y analizar resultados antes de la liberación.
+      <section class="info-panel" aria-labelledby="seccion-significado" style="border-left: 4px solid #2563eb; background: #f8fafc; border-radius: 8px; padding: 1.5rem; margin: 2rem auto; max-width: 1000px;">
+        <h2 id="seccion-significado" style="margin-top: 0; color: #1e293b;">¿Qué significa la gestión de pruebas?</h2>
+        <p style="color: #475569; line-height: 1.6;">
+          Significa estructurar y gobernar de forma ordenada cada prueba que valida si el software cumple con los requisitos,
+          funciona correctamente y puede entregarse con confianza. Esto abarca revisar riesgos potenciales, priorizar casos de prueba,
+          ejecutar validaciones y analizar resultados antes de la liberación final a producción.
         </p>
       </section>
 
-      <section class="test-grid">
-        <article class="test-card">
-          <img src="images/unitarias.svg" alt="Pruebas unitarias" />
+      <!-- CAMBIO VISUAL: Tarjetas con bordes sutiles, distintivos de clasificación y dimensiones consistentes -->
+      <section class="test-grid" aria-label="Catálogo de pruebas de software">
+        <article class="test-card" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08); border-radius: 10px; border-top: 4px solid #3b82f6; padding: 1.25rem;">
+          <div style="text-align: center; margin-bottom: 0.5rem;">
+            <img src="images/unitarias.svg" alt="Ilustración representativa de pruebas unitarias" width="60" height="60" />
+          </div>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: bold; background: #dbeafe; color: #1e40af; padding: 2px 8px; border-radius: 12px; margin-bottom: 0.5rem;">ESTRUCTURAL</span>
           <h3>Pruebas unitarias</h3>
-          <p><strong>Significado:</strong> Validan funciones o módulos pequeños para comprobar que cada parte del sistema funciona de forma aislada y correcta.</p>
+          <p><strong>Significado:</strong> Validan funciones, clases o módulos mínimos de forma aislada para garantizar que cada componente opera con precisión.</p>
         </article>
 
-        <article class="test-card">
-          <img src="images/integracion.svg" alt="Pruebas de integración" />
-          <h3>Integración</h3>
-          <p><strong>Significado:</strong> Comprueba que varios módulos o servicios interactúan correctamente cuando se conectan entre sí.</p>
+        <article class="test-card" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08); border-radius: 10px; border-top: 4px solid #06b6d4; padding: 1.25rem;">
+          <div style="text-align: center; margin-bottom: 0.5rem;">
+            <img src="images/integracion.svg" alt="Ilustración representativa de pruebas de integración" width="60" height="60" />
+          </div>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: bold; background: #cffafe; color: #155e75; padding: 2px 8px; border-radius: 12px; margin-bottom: 0.5rem;">INTERFAZ / MÓDULOS</span>
+          <h3>Pruebas de integración</h3>
+          <p><strong>Significado:</strong> Comprueban la comunicación e interoperabilidad correcta cuando varios módulos o servicios interactúan entre sí.</p>
         </article>
 
-        <article class="test-card">
-          <img src="images/regresion.svg" alt="Pruebas de regresión" />
-          <h3>Regresión</h3>
-          <p><strong>Significado:</strong> Asegura que cambios recientes no hayan roto funcionalidades que ya estaban funcionando antes.</p>
+        <article class="test-card" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08); border-radius: 10px; border-top: 4px solid #f59e0b; padding: 1.25rem;">
+          <div style="text-align: center; margin-bottom: 0.5rem;">
+            <img src="images/regresion.svg" alt="Ilustración representativa de pruebas de regresión" width="60" height="60" />
+          </div>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: bold; background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 12px; margin-bottom: 0.5rem;">ESTABILIDAD</span>
+          <h3>Pruebas de regresión</h3>
+          <p><strong>Significado:</strong> Aseguran que la implementación de nuevas características o parches no afecte negativamente las funciones preexistentes.</p>
         </article>
 
-        <article class="test-card">
-          <img src="images/rendimiento.svg" alt="Pruebas de rendimiento" />
-          <h3>Rendimiento</h3>
-          <p><strong>Significado:</strong> Evalúa la velocidad, estabilidad y capacidad del sistema bajo carga para detectar cuellos de botella.</p>
+        <article class="test-card" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08); border-radius: 10px; border-top: 4px solid #10b981; padding: 1.25rem;">
+          <div style="text-align: center; margin-bottom: 0.5rem;">
+            <img src="images/rendimiento.svg" alt="Ilustración representativa de pruebas de rendimiento" width="60" height="60" />
+          </div>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: bold; background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 12px; margin-bottom: 0.5rem;">NO FUNCIONAL</span>
+          <h3>Pruebas de rendimiento</h3>
+          <p><strong>Significado:</strong> Evalúan velocidad de respuesta, latencia y uso de memoria bajo volúmenes estándar para evitar cuellos de botella.</p>
         </article>
 
-        <article class="test-card">
-          <img src="images/esfuerzo.svg" alt="Pruebas de esfuerzo" />
-          <h3>Esfuerzo</h3>
-          <p><strong>Significado:</strong> Determina cómo responde el sistema cuando se somete a niveles altos de tráfico o uso simultáneo.</p>
+        <article class="test-card" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08); border-radius: 10px; border-top: 4px solid #ef4444; padding: 1.25rem;">
+          <div style="text-align: center; margin-bottom: 0.5rem;">
+            <img src="images/esfuerzo.svg" alt="Ilustración representativa de pruebas de esfuerzo" width="60" height="60" />
+          </div>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: bold; background: #fee2e2; color: #991b1b; padding: 2px 8px; border-radius: 12px; margin-bottom: 0.5rem;">CAPACIDAD / ESTRÉS</span>
+          <h3>Pruebas de esfuerzo</h3>
+          <p><strong>Significado:</strong> Determinan la resistencia y recuperación del sistema cuando se expone a cargas extremas o picos saturados de tráfico.</p>
         </article>
 
-        <article class="test-card">
-          <img src="images/usabilidad.svg" alt="Pruebas de usabilidad" />
-          <h3>Usabilidad</h3>
-          <p><strong>Significado:</strong> Mide si la aplicación es clara, cómoda y fácil de usar para las personas que la utilizan.</p>
+        <article class="test-card" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08); border-radius: 10px; border-top: 4px solid #8b5cf6; padding: 1.25rem;">
+          <div style="text-align: center; margin-bottom: 0.5rem;">
+            <img src="images/usabilidad.svg" alt="Ilustración representativa de pruebas de usabilidad" width="60" height="60" />
+          </div>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: bold; background: #ede9fe; color: #5b21b6; padding: 2px 8px; border-radius: 12px; margin-bottom: 0.5rem;">EXPERIENCIA UX</span>
+          <h3>Pruebas de usabilidad</h3>
+          <p><strong>Significado:</strong> Verifican que la interfaz sea clara, intuitiva, accesible y cómoda para cualquier perfil de usuario.</p>
         </article>
 
-        <article class="test-card">
-          <img src="images/caja-blanca.svg" alt="Pruebas de caja blanca" />
+        <article class="test-card" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08); border-radius: 10px; border-top: 4px solid #64748b; padding: 1.25rem;">
+          <div style="text-align: center; margin-bottom: 0.5rem;">
+            <img src="images/caja-blanca.svg" alt="Ilustración representativa de pruebas de caja blanca" width="60" height="60" />
+          </div>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: bold; background: #f1f5f9; color: #334155; padding: 2px 8px; border-radius: 12px; margin-bottom: 0.5rem;">CÓDIGO INTERNO</span>
           <h3>Caja blanca</h3>
-          <p><strong>Significado:</strong> Revisa la lógica interna del software para analizar decisiones, rutas y condiciones del código.</p>
+          <p><strong>Significado:</strong> Inspección con acceso al código fuente; valida bifurcaciones, bucles y condiciones lógicas internas.</p>
         </article>
 
-        <article class="test-card">
-          <img src="images/caja-negra.svg" alt="Pruebas de caja negra" />
+        <article class="test-card" style="box-shadow: 0 4px 6px -1px rgba(0,0,0,0.08); border-radius: 10px; border-top: 4px solid #0f172a; padding: 1.25rem;">
+          <div style="text-align: center; margin-bottom: 0.5rem;">
+            <img src="images/caja-negra.svg" alt="Ilustración representativa de pruebas de caja negra" width="60" height="60" />
+          </div>
+          <span style="display: inline-block; font-size: 0.7rem; font-weight: bold; background: #e2e8f0; color: #0f172a; padding: 2px 8px; border-radius: 12px; margin-bottom: 0.5rem;">COMPORTAMIENTO</span>
           <h3>Caja negra</h3>
-          <p><strong>Significado:</strong> Evalúa la funcionalidad del sistema desde la perspectiva del usuario, sin ver su estructura interna.</p>
+          <p><strong>Significado:</strong> Evalúa la funcionalidad del sistema basándose exclusivamente en entradas y salidas esperadas, sin mirar el código interno.</p>
         </article>
       </section>
 
-      <section class="highlight">
-        <h2>Importancia de la gestión de pruebas</h2>
+      <section class="highlight" aria-labelledby="seccion-importancia" style="border-radius: 8px; margin-top: 2rem;">
+        <h2 id="seccion-importancia">Importancia de la gestión de pruebas</h2>
         <p>
-          Una buena gestión de pruebas ayuda a detectar errores a tiempo, reducir riesgos, optimizar tiempos de entrega
-          y garantizar que la aplicación llegue al usuario con mayor calidad y confianza.
+          Una adecuada gestión de pruebas permite mitigar fallas a tiempo, reducir costos de retrabajo, optimizar tiempos de entrega
+          y asegurar que el producto final brinde una experiencia confiable, segura y de calidad.
         </p>
-        <div class="pill-list">
-          <span>Planificación</span>
-          <span>Diseño</span>
-          <span>Ejecución</span>
-          <span>Validación</span>
-          <span>Reporte</span>
-          <span>Mejora continua</span>
+        <div class="pill-list" role="list" aria-label="Etapas de la gestión">
+          <span role="listitem">Planificación</span>
+          <span role="listitem">Diseño</span>
+          <span role="listitem">Ejecución</span>
+          <span role="listitem">Validación</span>
+          <span role="listitem">Reporte</span>
+          <span role="listitem">Mejora continua</span>
         </div>
       </section>
     </main>
 
     <footer>
       <p>Unidad IV · Gestión de pruebas de software</p>
-      <p><a class="back-link" href="index.html">Volver al inicio</a></p>
+      <p><a class="back-link" href="index.html">← Volver al inicio</a></p>
     </footer>
 
     <script src="script.js"></script>
