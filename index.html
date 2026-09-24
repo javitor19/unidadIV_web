@@ -1,697 +1,1043 @@
-```html
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unidad IV | Pruebas y Liberación</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-
-  <body>
-
-    <!-- ==============================
-         LOGIN
-    =============================== -->
-    <div class="login-overlay" id="loginOverlay">
-      <div class="login-shell">
-
-        <div class="login-visual">
-          <span class="login-badge">Unidad IV</span>
-
-          <h2>Plataforma de calidad y entrega</h2>
-
-          <p>
-            Accede a la información de pruebas, infraestructura y liberación
-            de software con un entorno seguro y profesional.
-          </p>
-
-          <ul>
-            <li>Gestión de pruebas</li>
-            <li>Control de despliegues</li>
-            <li>Documentación técnica</li>
-          </ul>
-        </div>
-
-        <div class="login-card">
-          <div class="login-icon">🔐</div>
-
-          <h2>Acceso al contenido</h2>
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
 
-          <p>Ingresa tus credenciales para continuar.</p>
-
-          <form id="loginForm">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-            <label for="usuario">Correo</label>
-            <input
-              id="usuario"
-              type="email"
-              placeholder="admin@correo.com"
-              required
-            />
-
-            <label for="clave">Contraseña</label>
-            <input
-              id="clave"
-              type="password"
-              placeholder="1234"
-              required
-            />
-
-            <button type="submit">Entrar</button>
-
-          </form>
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- ==============================
-         BOTÓN DEL MENÚ
-    =============================== -->
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      aria-label="Abrir menú"
-    >
-      ☰
-    </button>
+html {
+    scroll-behavior: smooth;
+}
 
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #334155;
+    line-height: 1.7;
+}
 
-    <!-- ==============================
-         MENÚ DE USUARIO
-    =============================== -->
-    <div class="user-menu" id="userMenu">
-
-      <div class="user-menu-header">
-        <strong id="userNameLabel">Usuario</strong>
+/* =========================================================
+   ENCABEZADO PRINCIPAL
+========================================================= */
 
-        <button
-          class="close-menu"
-          id="closeMenu"
-          aria-label="Cerrar menú"
-        >
-          ✕
-        </button>
-      </div>
-
-      <div class="menu-section">
+.hero-header {
+    background: linear-gradient(
+        135deg,
+        #172b7a 0%,
+        #1d4ed8 50%,
+        #0ea5e9 100%
+    );
 
-        <button id="themeToggle">
-          🌙 Modo oscuro
-        </button>
+    color: white;
 
-        <button id="logoutBtn">
-          🔒 Cerrar sesión
-        </button>
+    padding: 42px 25px 55px;
 
-      </div>
+    position: relative;
+    overflow: hidden;
+}
 
-      <div class="menu-section">
+.hero-header::before {
+    content: "";
 
-        <label for="nameInput">
-          Nombre de usuario
-        </label>
+    position: absolute;
 
-        <input
-          id="nameInput"
-          type="text"
-          value="Usuario"
-        />
+    width: 450px;
+    height: 450px;
 
-        <button id="saveNameBtn">
-          Guardar nombre
-        </button>
+    border-radius: 50%;
 
-      </div>
+    background: rgba(255, 255, 255, 0.06);
 
-    </div>
+    top: -250px;
+    right: -100px;
+}
 
+.hero-header::after {
+    content: "";
 
-    <!-- ==============================
-         ENCABEZADO PRINCIPAL
-    =============================== -->
-    <header class="hero-header">
+    position: absolute;
 
-      <div class="header-content">
+    width: 350px;
+    height: 350px;
 
-        <p class="eyebrow">
-          Unidad IV · Desarrollo web
-        </p>
+    border-radius: 50%;
 
-        <!-- TÍTULO MEJORADO -->
-        <h1>
-          Liberación del <span>Software</span>
-        </h1>
+    background: rgba(255, 255, 255, 0.04);
 
-        <!-- DESCRIPCIÓN MEJORADA -->
-        <p class="intro">
-          Conoce los principales procesos, herramientas y estrategias
-          utilizadas para preparar, probar y liberar software de manera
-          segura, organizada y eficiente.
-        </p>
+    bottom: -230px;
+    left: -100px;
+}
 
-        <!-- NUEVOS INDICADORES -->
-        <div class="hero-info">
+.header-content {
+    max-width: 1180px;
 
-          <div class="hero-item">
-            <strong>✓</strong>
-            <span>Calidad</span>
-          </div>
+    margin: 0 auto;
 
-          <div class="hero-item">
-            <strong>✓</strong>
-            <span>Seguridad</span>
-          </div>
+    text-align: center;
 
-          <div class="hero-item">
-            <strong>✓</strong>
-            <span>Despliegue</span>
-          </div>
+    position: relative;
 
-        </div>
+    z-index: 2;
+}
 
+/* =========================================================
+   ETIQUETA SUPERIOR
+========================================================= */
 
-        <!-- NAVEGACIÓN -->
-        <nav class="top-nav">
+.eyebrow {
+    display: inline-flex;
 
-          <a href="#contenedores">
-            Contenedores
-          </a>
+    align-items: center;
 
-          <a href="#infraestructura">
-            Infraestructura
-          </a>
+    padding: 7px 17px;
 
-          <a href="#pruebas">
-            Pruebas de Software
-          </a>
+    margin-bottom: 18px;
 
-          <a href="#normativa">
-            Normativa
-          </a>
+    border: 1px solid rgba(255,255,255,0.30);
 
-          <a href="#documentacion">
-            Documentación
-          </a>
+    border-radius: 30px;
 
-          <a href="tipos-pruebas.html">
-            Tipos de pruebas
-          </a>
+    background: rgba(255,255,255,0.08);
 
-          <a href="tipos-requerimientos.html">
-            Tipos de requerimientos
-          </a>
+    backdrop-filter: blur(8px);
 
-          <a href="gestion-pruebas.html">
-            Gestión de pruebas
-          </a>
+    font-size: 13px;
 
-          <a href="acerca-mi-proyecto.html">
-            Acerca de mi proyecto
-          </a>
+    font-weight: 700;
 
-        </nav>
+    letter-spacing: 1.5px;
 
-      </div>
+    text-transform: uppercase;
+}
 
-    </header>
+/* =========================================================
+   TÍTULO
+========================================================= */
 
+.hero-header h1 {
+    font-size: clamp(38px, 5vw, 62px);
 
-    <!-- ==============================
-         CONTENIDO PRINCIPAL
-    =============================== -->
-    <main id="contenido">
+    line-height: 1.1;
 
-      <div
-        class="session-status"
-        id="sessionStatus"
-      >
-        Sesión iniciada correctamente
-      </div>
+    font-weight: 800;
 
+    margin-bottom: 18px;
 
-      <!-- PANEL PRINCIPAL -->
-      <section class="hero-panel">
+    letter-spacing: -1.5px;
+}
 
-        <div>
+.hero-header h1 span {
+    color: #bfdbfe;
+}
 
-          <h2>
-            Enfoque profesional del módulo
-          </h2>
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
 
-          <p>
-            Este contenido reúne los conceptos esenciales para preparar,
-            validar y publicar aplicaciones de forma ordenada, confiable
-            y escalable. En proyectos reales, la calidad del software
-            depende tanto de la estrategia de pruebas como de la correcta
-            infraestructura de despliegue.
-          </p>
+.intro {
+    max-width: 780px;
 
-        </div>
+    margin: 0 auto;
 
-        <div class="hero-badge">
-          ✅ Entregas seguras
-        </div>
+    color: rgba(255,255,255,0.90);
 
-      </section>
+    font-size: 17px;
 
+    line-height: 1.7;
+}
 
-      <!-- IMPORTANCIA -->
-      <section class="tema info-panel">
+/* =========================================================
+   INDICADORES
+========================================================= */
 
-        <h2>
-          Importancia de las pruebas y la liberación
-        </h2>
+.hero-info {
+    display: flex;
 
-        <p>
-          Las pruebas permiten detectar errores antes de que el sistema
-          llegue a producción, mientras que la liberación garantiza que
-          el software sea entregado con control, seguridad y documentación
-          adecuada. Un proceso bien estructurado reduce fallos, mejora la
-          experiencia del usuario y facilita la continuidad operativa.
-        </p>
+    justify-content: center;
 
-      </section>
+    align-items: center;
 
+    gap: 14px;
 
-      <!-- CONTENEDORES -->
-      <section
-        id="contenedores"
-        class="tema accordion-item"
-      >
+    margin: 28px auto 34px;
 
-        <button
-          class="accordion-trigger"
-          type="button"
-          aria-expanded="false"
-        >
+    flex-wrap: wrap;
+}
 
-          <div class="tema-header">
+.hero-item {
+    display: flex;
 
-            <h2>
-              Concepto de contenedores
-            </h2>
+    align-items: center;
 
-            <span class="tag">
-              Docker
-            </span>
+    justify-content: center;
 
-          </div>
+    gap: 8px;
 
-        </button>
+    min-width: 125px;
 
+    padding: 9px 18px;
 
-        <div class="accordion-content">
+    background: rgba(255,255,255,0.11);
 
-          <p>
-            Los contenedores son unidades ligeras de software que
-            encapsulan una aplicación junto con todas sus dependencias,
-            bibliotecas y configuraciones necesarias para ejecutarse de
-            manera consistente en cualquier entorno. A diferencia de las
-            máquinas virtuales tradicionales, los contenedores no requieren
-            un sistema operativo completo, lo que los hace más eficientes
-            en términos de recursos y velocidad de despliegue.
+    border: 1px solid rgba(255,255,255,0.18);
 
-            Gracias a esta característica, una aplicación desarrollada en
-            un equipo puede funcionar exactamente igual en entornos de
-            pruebas, producción o en la nube, evitando problemas de
-            compatibilidad y reduciendo el tiempo de configuración.
-            Además, los contenedores permiten escalar aplicaciones de forma
-            ágil, ya que se pueden replicar y distribuir fácilmente en
-            diferentes servidores o plataformas de nube como Docker, AWS,
-            Azure o Google Cloud.
-          </p>
+    border-radius: 30px;
 
+    backdrop-filter: blur(8px);
 
-          <div class="card-grid-inline">
+    font-size: 14px;
 
-            <div class="mini-card">
+    font-weight: 600;
+}
 
-              <h3>
-                Ejemplo
-              </h3>
+.hero-item strong {
+    color: #86efac;
 
-              <p>
-                Una aplicación web con Node.js, una base de datos y archivos
-                de configuración puede ejecutarse igual en desarrollo y
-                producción.
-              </p>
+    font-size: 17px;
+}
 
-            </div>
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
 
+.top-nav {
+    max-width: 1050px;
 
-            <div class="mini-card">
+    margin: 0 auto;
 
-              <h3>
-                Beneficio
-              </h3>
+    display: grid;
 
-              <p>
-                Reduce conflictos entre entornos y acelera el despliegue.
-              </p>
+    grid-template-columns: repeat(3, 1fr);
 
-            </div>
+    gap: 12px;
+}
 
-          </div>
+.top-nav a {
+    display: flex;
 
+    justify-content: center;
 
-          <img
-            src="images/docker.svg"
-            alt="Icono de Docker"
-            class="topic-image"
-          />
+    align-items: center;
 
+    min-height: 48px;
 
-          <div class="pill-list">
+    padding: 10px 16px;
 
-            <span>Docker</span>
-            <span>AWS</span>
-            <span>Azure</span>
-            <span>Google Cloud</span>
+    color: white;
 
-          </div>
+    text-decoration: none;
 
-        </div>
+    font-size: 14px;
 
-      </section>
+    font-weight: 600;
 
+    border-radius: 12px;
 
-      <!-- INFRAESTRUCTURA -->
-      <section
-        id="infraestructura"
-        class="tema accordion-item"
-      >
+    background: rgba(255,255,255,0.10);
 
-        <button
-          class="accordion-trigger"
-          type="button"
-          aria-expanded="false"
-        >
+    border: 1px solid rgba(255,255,255,0.20);
 
-          <div class="tema-header">
+    transition: all 0.2s ease;
+}
 
-            <h2>
-              Servicios de infraestructura
-            </h2>
+.top-nav a:hover {
+    background: rgba(255,255,255,0.20);
 
-            <span class="tag">
-              Infraestructura
-            </span>
+    border-color: rgba(255,255,255,0.40);
 
-          </div>
+    transform: translateY(-2px);
+}
 
-        </button>
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
 
+main {
+    max-width: 1180px;
 
-        <div class="accordion-content">
+    margin: 0 auto;
 
-          <p>
-            La infraestructura en la nube ofrece recursos escalables para
-            alojar aplicaciones, bases de datos y servicios de red sin
-            depender de hardware físico local.
-          </p>
+    padding: 42px 22px 70px;
+}
 
+/* =========================================================
+   ESTADO DE SESIÓN
+========================================================= */
 
-          <ul>
+.session-status {
+    display: block;
 
-            <li>
-              <strong>Servidor de aplicaciones:</strong>
-              ejecuta la lógica de negocio y atiende peticiones web.
-            </li>
+    width: fit-content;
 
-            <li>
-              <strong>Servidor de base de datos:</strong>
-              almacena y gestiona información de forma segura y eficiente.
-            </li>
+    margin: 0 auto 25px;
 
-            <li>
-              <strong>Balanceo de cargas:</strong>
-              distribuye el tráfico entre varios servidores para mejorar
-              disponibilidad.
-            </li>
+    padding: 9px 18px;
 
-            <li>
-              <strong>Configuración de dominio:</strong>
-              permite acceder al sistema mediante un nombre de internet.
-            </li>
+    background: #dcfce7;
 
-            <li>
-              <strong>Certificados de seguridad:</strong>
-              habilitan HTTPS y protegen la comunicación entre cliente
-              y servidor.
-            </li>
+    color: #166534;
 
-          </ul>
+    border: 1px solid #bbf7d0;
 
-        </div>
+    border-radius: 30px;
 
-      </section>
+    font-size: 13px;
 
+    font-weight: 700;
+}
 
-      <!-- PRUEBAS -->
-      <section
-        id="pruebas"
-        class="tema accordion-item"
-      >
+/* =========================================================
+   PANEL PRINCIPAL
+========================================================= */
 
-        <button
-          class="accordion-trigger"
-          type="button"
-          aria-expanded="false"
-        >
+.hero-panel {
+    display: grid;
 
-          <div class="tema-header">
+    grid-template-columns: 1fr auto;
 
-            <h2>
-              Pruebas de software
-            </h2>
+    align-items: center;
 
-            <span class="tag">
-              Calidad
-            </span>
+    gap: 35px;
 
-          </div>
+    padding: 34px 38px;
 
-        </button>
+    margin-bottom: 25px;
 
+    background: white;
 
-        <div class="accordion-content">
+    border: 1px solid #e2e8f0;
 
-          <p>
-            Las pruebas de software son esenciales para verificar que
-            el sistema cumple con requisitos, funciona correctamente
-            y no presenta errores críticos.
-          </p>
+    border-radius: 22px;
 
+    box-shadow:
+        0 10px 30px rgba(15,23,42,0.07);
+}
 
-          <div class="pill-list">
+.hero-panel h2 {
+    color: #1e40af;
 
-            <span>Caja blanca</span>
-            <span>Caja negra</span>
-            <span>Unitarias</span>
-            <span>Integración</span>
-            <span>Regresión</span>
-            <span>Rendimiento</span>
-            <span>Esfuerzo</span>
-            <span>Usabilidad</span>
+    font-size: 25px;
 
-          </div>
+    margin-bottom: 10px;
+}
 
-        </div>
+.hero-panel p {
+    max-width: 780px;
 
-      </section>
+    color: #64748b;
+}
 
+.hero-badge {
+    white-space: nowrap;
 
-      <!-- NORMATIVA -->
-      <section
-        id="normativa"
-        class="tema accordion-item"
-      >
+    padding: 13px 20px;
 
-        <button
-          class="accordion-trigger"
-          type="button"
-          aria-expanded="false"
-        >
+    background: #dcfce7;
 
-          <div class="tema-header">
+    color: #15803d;
 
-            <h2>
-              Políticas y normativa
-            </h2>
+    border-radius: 12px;
 
-            <span class="tag">
-              Cumplimiento
-            </span>
+    font-weight: 700;
 
-          </div>
+    font-size: 14px;
+}
 
-        </button>
+/* =========================================================
+   TARJETAS
+========================================================= */
 
+.tema {
+    background: white;
 
-        <div class="accordion-content">
+    border: 1px solid #e2e8f0;
 
-          <p>
-            Las políticas de liberación garantizan que el software cumpla
-            con estándares de calidad, seguridad y documentación antes de
-            su despliegue. Estas políticas no solo establecen criterios
-            técnicos, sino también procedimientos organizativos que
-            aseguran que cada versión liberada sea confiable y esté
-            alineada con los objetivos del proyecto.
+    border-radius: 20px;
 
-            En muchos proyectos se aplican marcos como ISO/IEC 25010,
-            que permite evaluar atributos de calidad tales como
-            funcionalidad, fiabilidad, usabilidad, eficiencia y
-            mantenibilidad, asegurando que el producto cumpla con
-            expectativas tanto técnicas como de negocio.
-          </p>
+    margin-bottom: 22px;
 
-        </div>
+    box-shadow:
+        0 8px 25px rgba(15,23,42,0.05);
 
-      </section>
+    overflow: hidden;
+}
 
+/* =========================================================
+   PANEL DE IMPORTANCIA
+========================================================= */
 
-      <!-- DOCUMENTACIÓN -->
-      <section
-        id="documentacion"
-        class="tema accordion-item"
-      >
+.info-panel {
+    padding: 30px 34px;
 
-        <button
-          class="accordion-trigger"
-          type="button"
-          aria-expanded="false"
-        >
+    border-left: 5px solid #2563eb;
+}
 
-          <div class="tema-header">
+.info-panel h2 {
+    color: #1e40af;
 
-            <h2>
-              Documentación
-            </h2>
+    font-size: 22px;
 
-            <span class="tag">
-              Soporte
-            </span>
+    margin-bottom: 12px;
+}
 
-          </div>
+.info-panel p {
+    color: #64748b;
+}
 
-        </button>
+/* =========================================================
+   ACORDEONES
+========================================================= */
 
+.accordion-trigger {
+    width: 100%;
 
-        <div class="accordion-content">
+    border: none;
 
-          <p>
-            El manual de usuario constituye un documento fundamental que
-            describe de manera clara y estructurada el funcionamiento del
-            sistema, con el propósito de facilitar su uso tanto por parte
-            de los clientes como de los administradores.
+    background: transparent;
 
-            Este recurso no solo explica las funciones principales, sino
-            que también orienta al lector en la navegación de las
-            interfaces, la ejecución de tareas y la comprensión de los
-            procesos internos.
+    cursor: pointer;
 
-            El manual incluye capturas de pantalla ilustrativas,
-            instrucciones paso a paso para realizar las operaciones más
-            comunes, guías de solución de problemas frecuentes y
-            referencias de configuración que permiten adaptar el sistema
-            a las necesidades específicas de cada entorno.
+    padding: 0;
 
-            Además, proporciona recomendaciones de buenas prácticas,
-            advertencias sobre posibles errores y sugerencias para
-            optimizar el rendimiento de la plataforma.
+    text-align: left;
+}
 
-            Gracias a esta documentación, los usuarios pueden adquirir
-            autonomía en el manejo del sistema, reducir la dependencia
-            del soporte técnico y garantizar un uso más eficiente y
-            seguro.
-          </p>
+.tema-header {
+    display: flex;
 
+    justify-content: space-between;
 
-          <div class="doc-layout">
+    align-items: center;
 
-            <div class="mini-card">
+    gap: 20px;
 
-              <h3>
-                Ejemplo de manual
-              </h3>
+    padding: 23px 28px;
 
-              <p>
-                Pasos para iniciar sesión, navegar por el sistema,
-                generar reportes y resolver errores comunes.
-              </p>
+    background: white;
 
-            </div>
+    transition: background 0.2s ease;
+}
 
+.tema-header:hover {
+    background: #f8fafc;
+}
 
-            <img
-              src="images/docker.svg"
-              alt="Documentación técnica"
-              class="topic-image"
-            />
+.tema-header h2 {
+    color: #1e3a8a;
 
-          </div>
+    font-size: 20px;
+}
 
-        </div>
+.tag {
+    flex-shrink: 0;
 
-      </section>
+    padding: 6px 13px;
 
+    background: #eff6ff;
 
-      <!-- CONTEXTO -->
-      <section class="tema contextual-card">
+    color: #2563eb;
 
-        <h2>
-          Contexto general del tema
-        </h2>
+    border: 1px solid #dbeafe;
 
-        <p>
-          Explora una visión más amplia sobre cómo se integran las pruebas,
-          la infraestructura y la liberación de software en proyectos reales.
-        </p>
+    border-radius: 20px;
 
-        <a
-          href="contexto.html"
-          class="secondary-link"
-        >
-          Ver contexto general
-        </a>
+    font-size: 12px;
 
-        <a
-          href="acerca-mi-proyecto.html"
-          class="secondary-link"
-        >
-          Ver acerca de mi proyecto
-        </a>
+    font-weight: 700;
+}
 
-      </section>
+.accordion-content {
+    padding: 0 28px 28px;
 
-    </main>
+    color: #64748b;
+}
 
+.accordion-content p {
+    margin-bottom: 20px;
+}
 
-    <!-- ==============================
-         PIE DE PÁGINA
-    =============================== -->
-    <footer>
+/* =========================================================
+   TARJETAS INTERNAS
+========================================================= */
 
-      <p>
-        2026
-      </p>
+.card-grid-inline {
+    display: grid;
 
-      <p>
-        Proyecto académico realizado por “Héctor Javier. Uso educativo”
-      </p>
+    grid-template-columns: repeat(2, 1fr);
 
-      <p>
-        Proyecto académico · Unidad IV
-      </p>
+    gap: 16px;
 
-    </footer>
+    margin: 22px 0;
+}
 
+.mini-card {
+    padding: 20px;
 
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+    background: #f8fafc;
 
-  </body>
-</html>
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+}
+
+.mini-card h3 {
+    color: #1e40af;
+
+    font-size: 16px;
+
+    margin-bottom: 7px;
+}
+
+.mini-card p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+/* =========================================================
+   LISTAS
+========================================================= */
+
+.accordion-content ul {
+    padding-left: 22px;
+}
+
+.accordion-content li {
+    margin-bottom: 12px;
+}
+
+.accordion-content li strong {
+    color: #1e40af;
+}
+
+/* =========================================================
+   ETIQUETAS
+========================================================= */
+
+.pill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 18px;
+}
+
+.pill-list span {
+    padding: 7px 13px;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+/* =========================================================
+   IMÁGENES
+========================================================= */
+
+.topic-image {
+    display: block;
+
+    width: 90px;
+
+    max-width: 100%;
+
+    margin: 25px auto;
+
+    opacity: 0.9;
+}
+
+/* =========================================================
+   DOCUMENTACIÓN
+========================================================= */
+
+.doc-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 140px;
+
+    gap: 25px;
+
+    align-items: center;
+}
+
+/* =========================================================
+   CONTEXTO
+========================================================= */
+
+.contextual-card {
+    padding: 32px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #f8fafc
+        );
+}
+
+.contextual-card h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 10px;
+}
+
+.contextual-card p {
+    max-width: 700px;
+
+    margin: 0 auto 20px;
+
+    color: #64748b;
+}
+
+.secondary-link {
+    display: inline-flex;
+
+    margin: 5px;
+
+    padding: 10px 18px;
+
+    color: #1d4ed8;
+
+    background: white;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.secondary-link:hover {
+    background: #eff6ff;
+
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   BOTÓN DEL MENÚ
+========================================================= */
+
+.menu-toggle {
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    z-index: 1000;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.15);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+}
+
+/* =========================================================
+   MENÚ DE USUARIO
+========================================================= */
+
+.user-menu {
+    position: fixed;
+
+    top: 78px;
+
+    right: 20px;
+
+    width: 300px;
+
+    z-index: 999;
+
+    padding: 18px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(15,23,42,0.18);
+}
+
+.user-menu-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.close-menu {
+    border: none;
+
+    background: transparent;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.menu-section {
+    padding: 15px 0;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+.menu-section label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.menu-section input {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 9px;
+
+    margin-bottom: 9px;
+}
+
+.menu-section button {
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    margin-bottom: 8px;
+}
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e3a8a,
+            #0369a1
+        );
+}
+
+.login-shell {
+    width: min(950px, 100%);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.35);
+}
+
+.login-visual {
+    padding: 55px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1e3a8a,
+            #2563eb
+        );
+
+    color: white;
+}
+
+.login-badge {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.login-visual h2 {
+    margin: 25px 0 15px;
+
+    font-size: 32px;
+}
+
+.login-visual p {
+    color: rgba(255,255,255,0.85);
+}
+
+.login-visual ul {
+    margin-top: 25px;
+
+    padding-left: 20px;
+}
+
+.login-visual li {
+    margin-bottom: 10px;
+}
+
+.login-card {
+    padding: 55px 45px;
+}
+
+.login-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.login-card h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 8px;
+}
+
+.login-card p {
+    color: #64748b;
+
+    margin-bottom: 25px;
+}
+
+.login-card label {
+    display: block;
+
+    margin: 15px 0 6px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.login-card input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.login-card input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37,99,235,0.12);
+}
+
+.login-card button {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.login-card button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #0f172a;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+footer p {
+    margin: 4px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .top-nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-badge {
+        width: fit-content;
+    }
+
+    .login-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .login-visual {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero-header {
+        padding: 35px 18px;
+    }
+
+    .hero-header h1 {
+        font-size: 38px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .top-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-info {
+        flex-direction: column;
+    }
+
+    .hero-item {
+        width: 180px;
+        justify-content: center;
+    }
+
+    main {
+        padding: 25px 14px 50px;
+    }
+
+    .hero-panel,
+    .info-panel {
+        padding: 25px 20px;
+    }
+
+    .tema-header {
+        padding: 20px;
+    }
+
+    .tema-header h2 {
+        font-size: 17px;
+    }
+
+    .accordion-content {
+        padding: 0 20px 22px;
+    }
+
+    .card-grid-inline {
+        grid-template-columns: 1fr;
+    }
+
+    .doc-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .user-menu {
+        left: 15px;
+        right: 15px;
+        width: auto;
+    }
+}
