@@ -1,697 +1,587 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Unidad IV | Pruebas y Liberación</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
+    <title>Liberación del Software - Unidad IV</title>
 
-    <!-- ==============================
-         LOGIN
-    =============================== -->
-    <div class="login-overlay" id="loginOverlay">
-      <div class="login-shell">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-        <div class="login-visual">
-          <span class="login-badge">Unidad IV</span>
+<body>
 
-          <h2>Plataforma de calidad y entrega</h2>
+    <!-- =====================================================
+         ENCABEZADO
+    ====================================================== -->
 
-          <p>
-            Accede a la información de pruebas, infraestructura y liberación
-            de software con un entorno seguro y profesional.
-          </p>
-
-          <ul>
-            <li>Gestión de pruebas</li>
-            <li>Control de despliegues</li>
-            <li>Documentación técnica</li>
-          </ul>
-        </div>
-
-        <div class="login-card">
-          <div class="login-icon">🔐</div>
-
-          <h2>Acceso al contenido</h2>
-
-          <p>Ingresa tus credenciales para continuar.</p>
-
-          <form id="loginForm">
-
-            <label for="usuario">Correo</label>
-            <input
-              id="usuario"
-              type="email"
-              placeholder="admin@correo.com"
-              required
-            />
-
-            <label for="clave">Contraseña</label>
-            <input
-              id="clave"
-              type="password"
-              placeholder="1234"
-              required
-            />
-
-            <button type="submit">Entrar</button>
-
-          </form>
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- ==============================
-         BOTÓN DEL MENÚ
-    =============================== -->
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      aria-label="Abrir menú"
-    >
-      ☰
-    </button>
-
-
-    <!-- ==============================
-         MENÚ DE USUARIO
-    =============================== -->
-    <div class="user-menu" id="userMenu">
-
-      <div class="user-menu-header">
-        <strong id="userNameLabel">Usuario</strong>
-
-        <button
-          class="close-menu"
-          id="closeMenu"
-          aria-label="Cerrar menú"
-        >
-          ✕
-        </button>
-      </div>
-
-      <div class="menu-section">
-
-        <button id="themeToggle">
-          🌙 Modo oscuro
-        </button>
-
-        <button id="logoutBtn">
-          🔒 Cerrar sesión
-        </button>
-
-      </div>
-
-      <div class="menu-section">
-
-        <label for="nameInput">
-          Nombre de usuario
-        </label>
-
-        <input
-          id="nameInput"
-          type="text"
-          value="Usuario"
-        />
-
-        <button id="saveNameBtn">
-          Guardar nombre
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <!-- ==============================
-         ENCABEZADO PRINCIPAL
-    =============================== -->
     <header class="hero-header">
 
-      <div class="header-content">
+        <div class="header-content">
 
-        <p class="eyebrow">
-          Unidad IV · Desarrollo web
-        </p>
+            <div class="eyebrow">
+                UNIDAD IV · DESARROLLO WEB
+            </div>
 
-        <!-- TÍTULO MEJORADO -->
-        <h1>
-          Liberación del <span>Software</span>
-        </h1>
+            <h1>
+                Liberación del Software
+            </h1>
 
-        <!-- DESCRIPCIÓN MEJORADA -->
-        <p class="intro">
-          Conoce los principales procesos, herramientas y estrategias
-          utilizadas para preparar, probar y liberar software de manera
-          segura, organizada y eficiente.
-        </p>
+            <p class="intro">
+                Conoce los principales procesos, herramientas y estrategias
+                utilizadas para preparar, probar y liberar software de manera
+                segura, ordenada y eficiente.
+            </p>
 
-        <!-- NUEVOS INDICADORES -->
-        <div class="hero-info">
+            <!-- INDICADORES -->
 
-          <div class="hero-item">
-            <strong>✓</strong>
-            <span>Calidad</span>
-          </div>
+            <div class="hero-info">
 
-          <div class="hero-item">
-            <strong>✓</strong>
-            <span>Seguridad</span>
-          </div>
+                <div class="hero-item">
+                    <strong>✓</strong>
+                    <span>Calidad</span>
+                </div>
 
-          <div class="hero-item">
-            <strong>✓</strong>
-            <span>Despliegue</span>
-          </div>
+                <div class="hero-item">
+                    <strong>✓</strong>
+                    <span>Seguridad</span>
+                </div>
+
+                <div class="hero-item">
+                    <strong>✓</strong>
+                    <span>Despliegue</span>
+                </div>
+
+            </div>
+
+            <!-- =================================================
+                 NAVEGACIÓN DEL CONTENIDO
+            ================================================== -->
+
+            <nav class="top-nav">
+
+                <a href="#contenedores">
+                    Contenedores
+                </a>
+
+                <a href="#infraestructura">
+                    Infraestructura
+                </a>
+
+                <a href="#pruebas">
+                    Pruebas de Software
+                </a>
+
+                <a href="#normativa">
+                    Normativa
+                </a>
+
+                <a href="#documentacion">
+                    Documentación
+                </a>
+
+                <a href="#tipos-pruebas">
+                    Tipos de pruebas
+                </a>
+
+                <a href="#requerimientos">
+                    Tipos de requerimientos
+                </a>
+
+                <a href="#gestion-pruebas">
+                    Gestión de pruebas
+                </a>
+
+                <a href="#acerca">
+                    Acerca del proyecto
+                </a>
+
+            </nav>
 
         </div>
-
-
-        <!-- NAVEGACIÓN -->
-        <nav class="top-nav">
-
-          <a href="#contenedores">
-            Contenedores
-          </a>
-
-          <a href="#infraestructura">
-            Infraestructura
-          </a>
-
-          <a href="#pruebas">
-            Pruebas de Software
-          </a>
-
-          <a href="#normativa">
-            Normativa
-          </a>
-
-          <a href="#documentacion">
-            Documentación
-          </a>
-
-          <a href="tipos-pruebas.html">
-            Tipos de pruebas
-          </a>
-
-          <a href="tipos-requerimientos.html">
-            Tipos de requerimientos
-          </a>
-
-          <a href="gestion-pruebas.html">
-            Gestión de pruebas
-          </a>
-
-          <a href="acerca-mi-proyecto.html">
-            Acerca de mi proyecto
-          </a>
-
-        </nav>
-
-      </div>
 
     </header>
 
 
-    <!-- ==============================
+    <!-- =====================================================
          CONTENIDO PRINCIPAL
-    =============================== -->
-    <main id="contenido">
+    ====================================================== -->
 
-      <div
-        class="session-status"
-        id="sessionStatus"
-      >
-        Sesión iniciada correctamente
-      </div>
+    <main>
 
-
-      <!-- PANEL PRINCIPAL -->
-      <section class="hero-panel">
-
-        <div>
-
-          <h2>
-            Enfoque profesional del módulo
-          </h2>
-
-          <p>
-            Este contenido reúne los conceptos esenciales para preparar,
-            validar y publicar aplicaciones de forma ordenada, confiable
-            y escalable. En proyectos reales, la calidad del software
-            depende tanto de la estrategia de pruebas como de la correcta
-            infraestructura de despliegue.
-          </p>
-
+        <div class="session-status">
+            ✓ Contenido disponible
         </div>
 
-        <div class="hero-badge">
-          ✅ Entregas seguras
-        </div>
 
-      </section>
+        <!-- =================================================
+             PRESENTACIÓN
+        ================================================== -->
 
+        <section class="hero-panel">
 
-      <!-- IMPORTANCIA -->
-      <section class="tema info-panel">
+            <div>
 
-        <h2>
-          Importancia de las pruebas y la liberación
-        </h2>
+                <h2>
+                    Preparación y liberación de software
+                </h2>
 
-        <p>
-          Las pruebas permiten detectar errores antes de que el sistema
-          llegue a producción, mientras que la liberación garantiza que
-          el software sea entregado con control, seguridad y documentación
-          adecuada. Un proceso bien estructurado reduce fallos, mejora la
-          experiencia del usuario y facilita la continuidad operativa.
-        </p>
-
-      </section>
-
-
-      <!-- CONTENEDORES -->
-      <section
-        id="contenedores"
-        class="tema accordion-item"
-      >
-
-        <button
-          class="accordion-trigger"
-          type="button"
-          aria-expanded="false"
-        >
-
-          <div class="tema-header">
-
-            <h2>
-              Concepto de contenedores
-            </h2>
-
-            <span class="tag">
-              Docker
-            </span>
-
-          </div>
-
-        </button>
-
-
-        <div class="accordion-content">
-
-          <p>
-            Los contenedores son unidades ligeras de software que
-            encapsulan una aplicación junto con todas sus dependencias,
-            bibliotecas y configuraciones necesarias para ejecutarse de
-            manera consistente en cualquier entorno. A diferencia de las
-            máquinas virtuales tradicionales, los contenedores no requieren
-            un sistema operativo completo, lo que los hace más eficientes
-            en términos de recursos y velocidad de despliegue.
-
-            Gracias a esta característica, una aplicación desarrollada en
-            un equipo puede funcionar exactamente igual en entornos de
-            pruebas, producción o en la nube, evitando problemas de
-            compatibilidad y reduciendo el tiempo de configuración.
-            Además, los contenedores permiten escalar aplicaciones de forma
-            ágil, ya que se pueden replicar y distribuir fácilmente en
-            diferentes servidores o plataformas de nube como Docker, AWS,
-            Azure o Google Cloud.
-          </p>
-
-
-          <div class="card-grid-inline">
-
-            <div class="mini-card">
-
-              <h3>
-                Ejemplo
-              </h3>
-
-              <p>
-                Una aplicación web con Node.js, una base de datos y archivos
-                de configuración puede ejecutarse igual en desarrollo y
-                producción.
-              </p>
+                <p>
+                    En esta unidad conocerás los conceptos fundamentales
+                    relacionados con la liberación de software, desde la
+                    preparación del entorno hasta las pruebas y documentación.
+                </p>
 
             </div>
 
+            <div class="hero-badge">
+                Unidad IV
+            </div>
 
-            <div class="mini-card">
+        </section>
 
-              <h3>
-                Beneficio
-              </h3>
 
-              <p>
-                Reduce conflictos entre entornos y acelera el despliegue.
-              </p>
+        <!-- =================================================
+             CONTENEDORES
+        ================================================== -->
+
+        <section id="contenedores" class="tema">
+
+            <button class="accordion-trigger" type="button">
+
+                <div class="tema-header">
+
+                    <h2>
+                        Contenedores
+                    </h2>
+
+                    <span class="tag">
+                        Tecnología
+                    </span>
+
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    Los contenedores permiten empaquetar una aplicación junto
+                    con sus dependencias para facilitar su ejecución y
+                    despliegue en diferentes entornos.
+                </p>
+
+                <div class="card-grid-inline">
+
+                    <article class="mini-card">
+
+                        <h3>
+                            Portabilidad
+                        </h3>
+
+                        <p>
+                            Permite ejecutar una aplicación de manera
+                            consistente en diferentes ambientes.
+                        </p>
+
+                    </article>
+
+                    <article class="mini-card">
+
+                        <h3>
+                            Aislamiento
+                        </h3>
+
+                        <p>
+                            Cada aplicación puede funcionar de manera
+                            independiente.
+                        </p>
+
+                    </article>
+
+                </div>
 
             </div>
 
-          </div>
+        </section>
 
 
-          <img
-            src="images/docker.svg"
-            alt="Icono de Docker"
-            class="topic-image"
-          />
+        <!-- =================================================
+             INFRAESTRUCTURA
+        ================================================== -->
 
+        <section id="infraestructura" class="tema">
 
-          <div class="pill-list">
+            <button class="accordion-trigger" type="button">
 
-            <span>Docker</span>
-            <span>AWS</span>
-            <span>Azure</span>
-            <span>Google Cloud</span>
+                <div class="tema-header">
 
-          </div>
+                    <h2>
+                        Infraestructura
+                    </h2>
 
-        </div>
+                    <span class="tag">
+                        Entorno
+                    </span>
 
-      </section>
+                </div>
 
+            </button>
 
-      <!-- INFRAESTRUCTURA -->
-      <section
-        id="infraestructura"
-        class="tema accordion-item"
-      >
+            <div class="accordion-content">
 
-        <button
-          class="accordion-trigger"
-          type="button"
-          aria-expanded="false"
-        >
+                <p>
+                    La infraestructura proporciona los recursos necesarios
+                    para ejecutar, administrar y mantener una aplicación.
+                </p>
 
-          <div class="tema-header">
+                <div class="pill-list">
 
-            <h2>
-              Servicios de infraestructura
-            </h2>
+                    <span>Servidores</span>
+                    <span>Redes</span>
+                    <span>Almacenamiento</span>
+                    <span>Seguridad</span>
 
-            <span class="tag">
-              Infraestructura
-            </span>
-
-          </div>
-
-        </button>
-
-
-        <div class="accordion-content">
-
-          <p>
-            La infraestructura en la nube ofrece recursos escalables para
-            alojar aplicaciones, bases de datos y servicios de red sin
-            depender de hardware físico local.
-          </p>
-
-
-          <ul>
-
-            <li>
-              <strong>Servidor de aplicaciones:</strong>
-              ejecuta la lógica de negocio y atiende peticiones web.
-            </li>
-
-            <li>
-              <strong>Servidor de base de datos:</strong>
-              almacena y gestiona información de forma segura y eficiente.
-            </li>
-
-            <li>
-              <strong>Balanceo de cargas:</strong>
-              distribuye el tráfico entre varios servidores para mejorar
-              disponibilidad.
-            </li>
-
-            <li>
-              <strong>Configuración de dominio:</strong>
-              permite acceder al sistema mediante un nombre de internet.
-            </li>
-
-            <li>
-              <strong>Certificados de seguridad:</strong>
-              habilitan HTTPS y protegen la comunicación entre cliente
-              y servidor.
-            </li>
-
-          </ul>
-
-        </div>
-
-      </section>
-
-
-      <!-- PRUEBAS -->
-      <section
-        id="pruebas"
-        class="tema accordion-item"
-      >
-
-        <button
-          class="accordion-trigger"
-          type="button"
-          aria-expanded="false"
-        >
-
-          <div class="tema-header">
-
-            <h2>
-              Pruebas de software
-            </h2>
-
-            <span class="tag">
-              Calidad
-            </span>
-
-          </div>
-
-        </button>
-
-
-        <div class="accordion-content">
-
-          <p>
-            Las pruebas de software son esenciales para verificar que
-            el sistema cumple con requisitos, funciona correctamente
-            y no presenta errores críticos.
-          </p>
-
-
-          <div class="pill-list">
-
-            <span>Caja blanca</span>
-            <span>Caja negra</span>
-            <span>Unitarias</span>
-            <span>Integración</span>
-            <span>Regresión</span>
-            <span>Rendimiento</span>
-            <span>Esfuerzo</span>
-            <span>Usabilidad</span>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- NORMATIVA -->
-      <section
-        id="normativa"
-        class="tema accordion-item"
-      >
-
-        <button
-          class="accordion-trigger"
-          type="button"
-          aria-expanded="false"
-        >
-
-          <div class="tema-header">
-
-            <h2>
-              Políticas y normativa
-            </h2>
-
-            <span class="tag">
-              Cumplimiento
-            </span>
-
-          </div>
-
-        </button>
-
-
-        <div class="accordion-content">
-
-          <p>
-            Las políticas de liberación garantizan que el software cumpla
-            con estándares de calidad, seguridad y documentación antes de
-            su despliegue. Estas políticas no solo establecen criterios
-            técnicos, sino también procedimientos organizativos que
-            aseguran que cada versión liberada sea confiable y esté
-            alineada con los objetivos del proyecto.
-
-            En muchos proyectos se aplican marcos como ISO/IEC 25010,
-            que permite evaluar atributos de calidad tales como
-            funcionalidad, fiabilidad, usabilidad, eficiencia y
-            mantenibilidad, asegurando que el producto cumpla con
-            expectativas tanto técnicas como de negocio.
-          </p>
-
-        </div>
-
-      </section>
-
-
-      <!-- DOCUMENTACIÓN -->
-      <section
-        id="documentacion"
-        class="tema accordion-item"
-      >
-
-        <button
-          class="accordion-trigger"
-          type="button"
-          aria-expanded="false"
-        >
-
-          <div class="tema-header">
-
-            <h2>
-              Documentación
-            </h2>
-
-            <span class="tag">
-              Soporte
-            </span>
-
-          </div>
-
-        </button>
-
-
-        <div class="accordion-content">
-
-          <p>
-            El manual de usuario constituye un documento fundamental que
-            describe de manera clara y estructurada el funcionamiento del
-            sistema, con el propósito de facilitar su uso tanto por parte
-            de los clientes como de los administradores.
-
-            Este recurso no solo explica las funciones principales, sino
-            que también orienta al lector en la navegación de las
-            interfaces, la ejecución de tareas y la comprensión de los
-            procesos internos.
-
-            El manual incluye capturas de pantalla ilustrativas,
-            instrucciones paso a paso para realizar las operaciones más
-            comunes, guías de solución de problemas frecuentes y
-            referencias de configuración que permiten adaptar el sistema
-            a las necesidades específicas de cada entorno.
-
-            Además, proporciona recomendaciones de buenas prácticas,
-            advertencias sobre posibles errores y sugerencias para
-            optimizar el rendimiento de la plataforma.
-
-            Gracias a esta documentación, los usuarios pueden adquirir
-            autonomía en el manejo del sistema, reducir la dependencia
-            del soporte técnico y garantizar un uso más eficiente y
-            seguro.
-          </p>
-
-
-          <div class="doc-layout">
-
-            <div class="mini-card">
-
-              <h3>
-                Ejemplo de manual
-              </h3>
-
-              <p>
-                Pasos para iniciar sesión, navegar por el sistema,
-                generar reportes y resolver errores comunes.
-              </p>
+                </div>
 
             </div>
 
-
-            <img
-              src="images/docker.svg"
-              alt="Documentación técnica"
-              class="topic-image"
-            />
-
-          </div>
-
-        </div>
-
-      </section>
+        </section>
 
 
-      <!-- CONTEXTO -->
-      <section class="tema contextual-card">
+        <!-- =================================================
+             PRUEBAS
+        ================================================== -->
 
-        <h2>
-          Contexto general del tema
-        </h2>
+        <section id="pruebas" class="tema">
 
-        <p>
-          Explora una visión más amplia sobre cómo se integran las pruebas,
-          la infraestructura y la liberación de software en proyectos reales.
-        </p>
+            <button class="accordion-trigger" type="button">
 
-        <a
-          href="contexto.html"
-          class="secondary-link"
-        >
-          Ver contexto general
-        </a>
+                <div class="tema-header">
 
-        <a
-          href="acerca-mi-proyecto.html"
-          class="secondary-link"
-        >
-          Ver acerca de mi proyecto
-        </a>
+                    <h2>
+                        Pruebas de Software
+                    </h2>
 
-      </section>
+                    <span class="tag">
+                        Calidad
+                    </span>
+
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    Las pruebas de software permiten verificar que el sistema
+                    funcione correctamente y cumpla con los requisitos
+                    establecidos.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <strong>Pruebas funcionales:</strong>
+                        verifican las funciones del sistema.
+                    </li>
+
+                    <li>
+                        <strong>Pruebas de rendimiento:</strong>
+                        analizan el comportamiento bajo diferentes cargas.
+                    </li>
+
+                    <li>
+                        <strong>Pruebas de seguridad:</strong>
+                        permiten identificar vulnerabilidades.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             NORMATIVA
+        ================================================== -->
+
+        <section id="normativa" class="tema">
+
+            <button class="accordion-trigger" type="button">
+
+                <div class="tema-header">
+
+                    <h2>
+                        Normativa
+                    </h2>
+
+                    <span class="tag">
+                        Estándares
+                    </span>
+
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    Las normativas establecen criterios y buenas prácticas
+                    que ayudan a garantizar la calidad y seguridad del
+                    software.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DOCUMENTACIÓN
+        ================================================== -->
+
+        <section id="documentacion" class="tema">
+
+            <button class="accordion-trigger" type="button">
+
+                <div class="tema-header">
+
+                    <h2>
+                        Documentación
+                    </h2>
+
+                    <span class="tag">
+                        Información
+                    </span>
+
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <div class="doc-layout">
+
+                    <div>
+
+                        <p>
+                            La documentación contiene la información necesaria
+                            para comprender, utilizar, mantener y actualizar
+                            un sistema de software.
+                        </p>
+
+                        <div class="pill-list">
+
+                            <span>Manual de usuario</span>
+                            <span>Manual técnico</span>
+                            <span>Documentación API</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TIPOS DE PRUEBAS
+        ================================================== -->
+
+        <section id="tipos-pruebas" class="tema">
+
+            <button class="accordion-trigger" type="button">
+
+                <div class="tema-header">
+
+                    <h2>
+                        Tipos de pruebas
+                    </h2>
+
+                    <span class="tag">
+                        Testing
+                    </span>
+
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <div class="card-grid-inline">
+
+                    <article class="mini-card">
+
+                        <h3>
+                            Unitarias
+                        </h3>
+
+                        <p>
+                            Comprueban componentes individuales del sistema.
+                        </p>
+
+                    </article>
+
+                    <article class="mini-card">
+
+                        <h3>
+                            Integración
+                        </h3>
+
+                        <p>
+                            Verifican la interacción entre diferentes
+                            componentes.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REQUERIMIENTOS
+        ================================================== -->
+
+        <section id="requerimientos" class="tema">
+
+            <button class="accordion-trigger" type="button">
+
+                <div class="tema-header">
+
+                    <h2>
+                        Tipos de requerimientos
+                    </h2>
+
+                    <span class="tag">
+                        Análisis
+                    </span>
+
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <ul>
+
+                    <li>
+                        <strong>Funcionales:</strong>
+                        describen las funciones que debe realizar el sistema.
+                    </li>
+
+                    <li>
+                        <strong>No funcionales:</strong>
+                        establecen características como seguridad,
+                        rendimiento y disponibilidad.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             GESTIÓN DE PRUEBAS
+        ================================================== -->
+
+        <section id="gestion-pruebas" class="tema">
+
+            <button class="accordion-trigger" type="button">
+
+                <div class="tema-header">
+
+                    <h2>
+                        Gestión de pruebas
+                    </h2>
+
+                    <span class="tag">
+                        Gestión
+                    </span>
+
+                </div>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <p>
+                    La gestión de pruebas permite planificar, organizar,
+                    ejecutar y documentar las actividades relacionadas con
+                    la validación del software.
+                </p>
+
+                <div class="pill-list">
+
+                    <span>Planificación</span>
+                    <span>Ejecución</span>
+                    <span>Seguimiento</span>
+                    <span>Resultados</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ACERCA DEL PROYECTO
+        ================================================== -->
+
+        <section id="acerca" class="tema contextual-card">
+
+            <h2>
+                Acerca del proyecto
+            </h2>
+
+            <p>
+                Este proyecto presenta los conceptos principales relacionados
+                con la preparación, pruebas, documentación y liberación de
+                software.
+            </p>
+
+            <a href="#top" class="secondary-link">
+                Volver al inicio
+            </a>
+
+        </section>
 
     </main>
 
 
-    <!-- ==============================
-         PIE DE PÁGINA
-    =============================== -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer>
 
-      <p>
-        2026
-      </p>
+        <p>
+            Unidad IV · Liberación del Software
+        </p>
 
-      <p>
-        Proyecto académico realizado por “Héctor Javier. Uso educativo”
-      </p>
-
-      <p>
-        Proyecto académico · Unidad IV
-      </p>
+        <p>
+            Desarrollo Web
+        </p>
 
     </footer>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
     <script src="script.js"></script>
 
-  </body>
+</body>
 </html>
